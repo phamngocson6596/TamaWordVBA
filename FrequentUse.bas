@@ -18,7 +18,7 @@ pattern1 = "^H.m.*nay.*ng.y.*\(ng.y.*th.ng.*n.m.*\)"
     
 pattern2 = "H*\(*\)"
 
-replacetext = "H�m nay, ng�y " & Date & " (ng�y " & ngay & ", th�ng " & thang & ", n" & ChrW( _
+replacetext = "Hôm nay, ngày " & Date & " (ngày " & ngay & ", tháng " & thang & ", n" & ChrW( _
                 259) & "m " & nam & ")"
                 
 Call SearchDocForPattern(pattern1)
@@ -76,7 +76,7 @@ Set tblNew = ActiveDocument.Tables.Add(Selection.Range, 1, 2)
      Selection.Range.Font.Italic = False
     Selection.Font.Size = "13"
     Selection.Range.Font.Name = "Times New Roman"
-     Selection.TypeText "C�NG CH" & ChrW(7912) & "NG VI�N"
+     Selection.TypeText "CÔNG CH" & ChrW(7912) & "NG VIÊN"
     
  End With
  
@@ -226,7 +226,7 @@ Set tblNew = ActiveDocument.Tables.Add(Selection.Range, 1, 2)
      Selection.Range.Font.Italic = False
     Selection.Font.Size = "13"
     Selection.Range.Font.Name = "Times New Roman"
-     Selection.TypeText "C�NG CH" & ChrW(7912) & "NG VI�N"
+     Selection.TypeText "CÔNG CH" & ChrW(7912) & "NG VIÊN"
     
  End With
  
@@ -251,7 +251,7 @@ ngay = Trim(rule(Day(Date)))
 thang = Trim(rule(Month(Date)))
 nam = Trim(rule(Year(Date)))
 
-Selection.TypeText Text:="H�m nay, ng�y " & Date & " (ng�y " & ngay & ", th�ng " & thang & ", n" & ChrW( _
+Selection.TypeText Text:="Hôm nay, ngày " & Date & " (ngày " & ngay & ", tháng " & thang & ", n" & ChrW( _
         259) & "m " & nam & ")"
 End Sub
 Sub chuangayloichung1()
@@ -262,7 +262,7 @@ ngay = Trim(rule(Day(Date)))
 thang = Trim(rule(Month(Date)))
 nam = Trim(rule(Year(Date)))
 
-Selection.TypeText Text:="H�m nay, ng�y " & "....................." & " (ng�y ....................." & ", th�ng " & thang & ", n" & ChrW( _
+Selection.TypeText Text:="Hôm nay, ngày " & "....................." & " (ngày ....................." & ", tháng " & thang & ", n" & ChrW( _
         259) & "m " & nam & ")"
 End Sub
 
@@ -275,7 +275,7 @@ On Error Resume Next
 
     Application.Templates( _
         "C:\Users\Tama\AppData\Roaming\Microsoft\Templates\Normal.dotm"). _
-        BuildingBlockEntries("�ng b�").Insert Where:=Selection.Range, RichText:= _
+        BuildingBlockEntries("Ông bà").Insert Where:=Selection.Range, RichText:= _
         True
 End Sub
 
@@ -369,10 +369,10 @@ If Not IsLicenseValid Then Exit Sub
     'sets the object to an actual item on the undo stack
     objUndo.StartCustomRecord ("Day Updating")
 
-    Selection.TypeText Text:="ng�y "
+    Selection.TypeText Text:="ngày "
     Selection.Fields.Add Range:=Selection.Range, Type:=wdFieldEmpty, Text:= _
         "DATE  \@ ""dd"" ", PreserveFormatting:=True
-    Selection.TypeText Text:=" th�ng "
+    Selection.TypeText Text:=" tháng "
     Selection.Fields.Add Range:=Selection.Range, Type:=wdFieldEmpty, Text:= _
         "DATE  \@ ""MM"" ", PreserveFormatting:=True
     Selection.TypeText Text:=" n" & ChrW(259) & "m "
@@ -607,8 +607,8 @@ On Error GoTo buoc3
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
-        .Text = "Ho�ng Xu�n Ng" & ChrW(7909)
-        .Replacement.Text = "L� H�ng Anh"
+        .Text = "Hoàng Xuân Ng" & ChrW(7909)
+        .Replacement.Text = "Lê Hùng Anh"
         .Forward = True
         .Wrap = wdFindContinue
         .Format = False
@@ -634,8 +634,8 @@ buoc3:
     Selection.Find.ClearFormatting
     Selection.Find.Replacement.ClearFormatting
     With Selection.Find
-        .Text = "Ho�ng Xu�n Ng" & ChrW(7909)
-        .Replacement.Text = "L� H�ng Anh"
+        .Text = "Hoàng Xuân Ng" & ChrW(7909)
+        .Replacement.Text = "Lê Hùng Anh"
         .Forward = True
         .Wrap = wdFindContinue
         .Format = False
@@ -708,7 +708,7 @@ End Sub
 
 Function rule(spl As Variant) As String
 
-Dim sc: sc = Array("kh�ng", "m" & ChrW(7897) & "t", "hai", "ba", "b" & ChrW(7889) & "n", "n" & ChrW(259) & "m", "s�u", "b" & ChrW(7843) & "y", "t�m", "ch�n", "m" & ChrW(432) & ChrW(7901) & "i", "l" & ChrW(259) & "m")
+Dim sc: sc = Array("không", "m" & ChrW(7897) & "t", "hai", "ba", "b" & ChrW(7889) & "n", "n" & ChrW(259) & "m", "sáu", "b" & ChrW(7843) & "y", "tám", "chín", "m" & ChrW(432) & ChrW(7901) & "i", "l" & ChrW(259) & "m")
 Dim a As Integer, b As Integer, C As Integer, k As Integer
 Dim s1 As String, s2 As String, s3 As String, mns As String
 
